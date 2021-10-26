@@ -1,0 +1,13 @@
+/* This is a comment in CSS */
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #54413b;
+  height: 48px;
+}
+
+.container {
+  max-width: 987px;
+}
