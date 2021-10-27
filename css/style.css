@@ -1,13 +1,42 @@
 /* This is a comment in CSS */
 
-.header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #54413b;
-  height: 48px;
+:root {
+  --max-width: 987px;
+  --header-height: 60px;
+  --footer-height: 172px;
+  --default-font: "Open Sans";
+  --default-font-size: 1em;
+  --default-nav-size: 0.713em;
+  --default-pad-min: 0.5em;
+  --default-pad-med: 1em;
+  --default-pad-max: 1.5em;
+  --default-nav-padding: 20px;
+  --header-bg: #1d313f;
+  --main-bg: pink;
+  --footer-bg: #1d313f;
 }
 
-.container {
-  max-width: 987px;
+body {
+  display: grid;
+  gap: 0.5em;
+  grid:
+    "header" auto
+    "main" auto
+    "footer" auto;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--header-bg);
+  height: var(--header-height);
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  height: var(--footer-height);
 }
