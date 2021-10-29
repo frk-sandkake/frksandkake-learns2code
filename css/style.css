@@ -2,17 +2,18 @@
 /* .prettierrc.yml and .editorconfig are files with settings */
 
 :root {
-  --container-width: 987px;
-  --header-height: 60px;
+  --container-width: 1080px;
+  --header-height: 48px;
   --footer-height: 172px;
   --default-font-family: "Open Sans", sans-serif;
   --default-font-size: 1em;
   --default-nav-size: 0.713em;
-  --default-pad-min: 0.5em;
-  --default-pad-med: 1em;
-  --default-pad-max: 1.5em;
-  --default-nav-padding: 20px;
+  --gutter-sml: 0.5em;
+  --gutter-med: 1em;
+  --gutter-lrg: 1.5em;
+  --default-nav-padding: 1.2em;
   --brand-dark-blue: #1d313f;
+  --mainColor: #ff9800;
 }
 
 body {
@@ -25,9 +26,65 @@ body {
   font-family: var(--default-font-family);
 }
 
-.header {
+a:visited,
+a:link {
+  text-decoration: none;
+  color: aliceblue;
+}
+/**
+https://css-tricks.com/having-fun-with-link-hover-effects/ 
+*/
+
+a {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent 3px
+  );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  padding: var(--gutter-sml);
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+a:hover {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent
+  );
+}
+
+.app-navbar ul {
+  list-style: none;
+}
+
+.app-navbar li {
+  display: inline-block;
+  color: aliceblue;
+  padding: var(--gutter-sml);
+}
+
+.app-header {
   grid-area: header;
   background-color: var(--brand-dark-blue);
+  height: var(--header-height);
+}
+
+.container {
+  max-width: var(--container-width);
+  align-items: center;
+  margin: 0 auto;
+}
+
+.flex-it {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: var(--header-height);
 }
 
@@ -37,6 +94,6 @@ body {
 
 .app-footer {
   grid-area: footer;
-  background-color: var(--footer-bg);
+  background-color: var(--brand-dark-blue);
   height: var(--footer-height);
 }
