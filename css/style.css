@@ -1,5 +1,7 @@
-/* This is a comment in CSS */
-/* .prettierrc.yml and .editorconfig are files with settings */
+/** 
+This is a comment in CSS */
+/** 
+.prettierrc.yml and .editorconfig are files with settings */
 
 :root {
   --container-width: 1080px;
@@ -14,6 +16,33 @@
   --default-nav-padding: 1.2em;
   --brand-dark-blue: #1d313f;
   --mainColor: #ff9800;
+  --border-radius: 3px;
+}
+
+/**
+How to style scrollbar with CSS styles
+https://www.digitalocean.com/community/tutorials/css-scrollbars
+*/
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-dark-blue) var(--mainColor);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--brand-dark-blue);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--brand-dark-blue);
+  border-radius: var(--border-radius);
+  border: 3px solid var(--mainColor);
 }
 
 body {
@@ -26,36 +55,16 @@ body {
   font-family: var(--default-font-family);
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  padding: var(--gutter-sml);
+}
+
 a:visited,
 a:link {
   text-decoration: none;
   color: aliceblue;
-}
-/**
-https://css-tricks.com/having-fun-with-link-hover-effects/ 
-*/
-
-a {
-  background: linear-gradient(
-    to top,
-    var(--mainColor) 0%,
-    var(--mainColor) 3px,
-    transparent 3px
-  );
-  background-repeat: repeat-x;
-  background-size: 100%;
-  padding: var(--gutter-sml);
-  border-radius: 2px;
-  text-decoration: none;
-}
-
-a:hover {
-  background: linear-gradient(
-    to top,
-    var(--mainColor) 0%,
-    var(--mainColor) 5px,
-    transparent
-  );
 }
 
 .app-navbar ul {
@@ -68,6 +77,29 @@ a:hover {
   padding: var(--gutter-sml);
 }
 
+.app-navbar a {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent 3px
+  );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  padding: var(--gutter-sml);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
+.app-navbar a:hover {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent
+  );
+}
+
 .app-header {
   grid-area: header;
   background-color: var(--brand-dark-blue);
@@ -76,9 +108,13 @@ a:hover {
 
 .container {
   max-width: var(--container-width);
-  align-items: center;
-  margin: 0 auto;
+  margin: auto;
 }
+
+/** 
+margin: auto; Center aligns elements 
+text-align: center; Center aligns text-align: center
+see more https://www.w3schools.com/css/css_align.asp */
 
 .flex-it {
   display: flex;
@@ -90,6 +126,29 @@ a:hover {
 
 .app-main {
   grid-area: main;
+}
+
+.h-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  overflow-x: scroll;
+  cursor: pointer;
+  margin: auto;
+}
+
+.raise {
+  width: 250px;
+  height: 170px;
+  padding: var(--gutter-sml);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
 
 .app-footer {
