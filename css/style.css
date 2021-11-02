@@ -61,8 +61,8 @@ img {
   padding: var(--gutter-sml);
 }
 
-a:visited,
-a:link {
+a:link,
+a:visited {
   text-decoration: none;
   color: aliceblue;
 }
@@ -81,7 +81,7 @@ a:link {
   background: linear-gradient(
     to top,
     var(--mainColor) 0%,
-    var(--mainColor) 3px,
+    var(--mainColor) 4px,
     transparent 3px
   );
   background-repeat: repeat-x;
@@ -99,6 +99,36 @@ a:link {
     transparent
   );
 }
+
+.app-navbar a:active {
+  border: 1px solid var(--mainColor);
+}
+
+/**
+
+.breadcrumbs {
+  position: relative;
+  white-space: nowrap;
+  font-family: var(--default-font-family);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.breadcrumbs .breadcrumb_last {
+  color: var(--mainColor);
+  display: block;
+  text-transform: none;
+  white-space: normal;
+}
+
+.breadcrumbs .breadcrumb_last,
+.h1 {
+  font-family: var(--default-font-family);
+  font-style: normal;
+  font-size: large;
+  font-weight: 700;
+}
+*/
 
 .app-header {
   grid-area: header;
@@ -126,6 +156,23 @@ see more https://www.w3schools.com/css/css_align.asp */
 
 .app-main {
   grid-area: main;
+}
+
+.app-hero {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.r-side {
+  flex: 30%;
+  background-color: pink;
+  padding: 20px;
+}
+
+.l-side {
+  flex: 70;
+  background-color: purple;
+  padding: 20px;
 }
 
 .h-scroll {
