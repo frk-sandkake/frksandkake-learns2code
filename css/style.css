@@ -81,8 +81,13 @@ a:visited {
   background: linear-gradient(
     to top,
     var(--mainColor) 0%,
-    var(--mainColor) 4px,
-    transparent 3px
+    var(--mainColor) 3px,
+    transparent 1px
+      /** 
+      Nr 1 is for the gradient, 
+      Nr 2 is for solid underlining and 
+      Nr 3 is for transparent underlining 
+      */
   );
   background-repeat: repeat-x;
   background-size: 100%;
@@ -91,19 +96,25 @@ a:visited {
   text-decoration: none;
 }
 
-.app-navbar a:hover {
+.app-navbar a:hover,
+.app-navbar a:focus,
+.app-navbar a:active {
   background: linear-gradient(
     to top,
     var(--mainColor) 0%,
-    var(--mainColor) 5px,
+    var(--mainColor) 3px,
     transparent
   );
 }
 
-.app-navbar a:active {
-  border: 1px solid var(--mainColor);
+.app-navbar .current {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent
+  );
 }
-
 /**
 
 .breadcrumbs {
