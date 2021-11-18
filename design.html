@@ -18,34 +18,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/navigation.css" />
+    <link rel="stylesheet" href="/css/scrollbar.css" />
     <!-- https://github.com/necolas/normalize.css/ -->
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>frkSandkake Learns HTML & CSS | Home</title>
+    <title>Home | frkSandkake Learns 2 Code</title>
   </head>
   <body class="">
-    <header class="app-header">
+    <header class="header-container">
       <div class="container">
-        <div class="row flex-it">
-          <img
-            style="width: 62px; height: 32px"
-            src="/img/LOGO3x.jpg"
-            alt="LOGO"
-          />
-          <nav class="app-navbar">
-            <ul>
-              <li><a class="current" href="design.html">Design</a></li>
-              <li><a href="html.html">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-              <li><a href="index.html">Home</a></li>
-            </ul>
+        <section class="header-container-items">
+          <img id="logo" src="/img/LOGO3x.jpg" alt="LOGO" />
+          <nav class="navigation-primary">
+            <a class="current" href="design.html">Design</a>
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="index.html">Home</a>
           </nav>
-        </div>
+        </section>
       </div>
     </header>
-    <main class="app-main">
+    <main class="main-container">
       <div class="container">
-        <section class="app-hero">
+        <section class="main-container-items">
           <div class="r-side">Hi! I'm the right side.</div>
           <div class="l-side">Hi! I'm the left side.</div>
         </section>

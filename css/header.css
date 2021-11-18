@@ -1,0 +1,17 @@
+.header-container {
+  grid-area: header;
+  background-color: var(--brand-dark-blue);
+  height: 3.5rem;
+}
+
+.header-container-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+
+#logo {
+  width: 60px;
+}

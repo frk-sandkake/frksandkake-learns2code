@@ -1,0 +1,38 @@
+.navigation-primary a {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent 1px
+      /** 
+        Nr 1 is for the gradient, 
+        Nr 2 is for solid underlining and 
+        Nr 3 is for transparent underlining 
+        */
+  );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  padding: var(--gutter-sml);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
+.navigation-primary a:hover,
+.navigation-primary a:focus,
+.navigation-primary a:active {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent
+  );
+}
+
+.navigation-primary .current {
+  background: linear-gradient(
+    to top,
+    var(--mainColor) 0%,
+    var(--mainColor) 3px,
+    transparent
+  );
+}
